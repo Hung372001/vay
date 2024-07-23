@@ -1,0 +1,126 @@
+.container{
+    display: flex;
+    flex-direction: column;
+}
+
+.vay-header{
+    padding: 10px 15px;
+    padding-top: 5px;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+}
+.arrow-icon{
+    font-size: 25px !important;
+    color: #fff !important;
+}
+.header-text{
+    font-weight: 500 !important;
+    font-size: 20px !important;
+    text-align: center !important;
+    color: #fff !important;
+}
+
+.old-debt-text{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    padding: 10px 0px 10px 35px !important;
+}
+.vay-body{
+    padding: 20px 0px !important;
+    background: linear-gradient(180deg, #ff0021 0%, #ff7875ad 100%);
+}
+.title-container{
+    padding: 15px 4px 5px 4px !important;
+}
+.title{
+    font-weight: 500;
+    font-size: 18px !important;
+}
+.input-container{
+    align-self: center;
+    padding: 0px 20px;
+}
+.input-field{
+    font-size: 17px !important;
+    font-weight: 500px !important;
+    padding: 5px 10px !important;
+    border-radius: 10px !important;
+    border: 1px solid #C4C4C4 !important;
+}
+.subtitle{
+    display: flex !important;
+    justify-content: space-between !important;
+    padding: 10px 30px !important;
+    font-size: 13px !important;
+    font-weight: 500 !important;
+}
+.month-container{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 15px !important;
+    font-weight: 500 !important;
+}
+
+.month-picker{
+    text-align: center !important;
+    font-size: 13px !important;
+}
+.form-container{
+    margin-top: 20px;
+    padding: 20px 30px;
+}
+.information-form{
+    box-shadow: 0 8px 6px rgb( 0 0 0/0.2);
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(180deg, #ff0021 0%, rgba(0, 132, 69, 0.112) 100%);
+    border-radius: 10px;
+}
+.form-title{
+    margin-top: 10px !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    width: 100% !important;
+    text-align: center;
+}
+.information{
+    padding: 10px 5px !important;
+}
+.details-information{
+    padding: 5px 22px !important;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+.btn-container{
+    align-items: center !important;
+    padding: 15px 0px !important;
+    display: flex;
+    justify-content: center !important;
+}
+.btn-title{
+    font-size: 20px !important;
+    font-weight: 500 !important;
+    color: white !important;
+}
+.confirm-btn{
+    width: auto !important;
+    align-content: center !important;
+    text-align: center !important;
+    height: 58px !important;
+    background: #ff0021 !important;
+    border: 1px solid #C4C4C4 !important;
+    border-radius: 30px !important;
+}
+
+.sign-form{
+    box-shadow: 0 8px 6px rgb( 0 0 0/0.2);
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 132, 69, 0.08);
+    border: 1px solid #000000;
+    border-radius: 30px;
+}

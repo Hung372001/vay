@@ -1,0 +1,31 @@
+.body{
+    display: flex !important;
+    justify-items: center !important;
+    text-align: center !important;
+    padding: 25px 20px ;
+}
+.body-title{
+    font-size: 25px !important;
+    font-weight: 400 !important;
+}
+.zalo-container{
+    
+}
+.zalo{
+    background: 10px 10px 10 rgb(0 0 0 /0.2) !important;
+    width: 60% !important;
+}
+.footer{
+    display: flex;
+    justify-content: center;
+}
+.back-btn {
+    
+    border: 1px #c4c4c4 !important;
+    background:  #008445E5 !important;
+    border-radius: 30px !important;
+    height: 50px !important;
+    color: white !important;
+    font-size: 20px !important;
+    font-weight: 500 !important;
+}

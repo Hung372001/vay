@@ -1,0 +1,68 @@
+.header {
+  background:  #ff0021;
+  display: flex !important;
+  padding: 10px;
+  justify-content: center !important;
+}
+.header-text{
+  color: white !important ;
+  font-weight: 700 !important;
+  font-size: 25px !important;
+}
+
+.avatar{
+display: flex;
+ justify-content: center;
+ align-items: center;
+ flex-direction: column;
+ padding: 20px 10px;
+}
+.icon{
+  font-size: 25px !important;
+  color: #C4C4C4 !important;
+  margin-right: 20px !important;
+}
+.log-out{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+.log-out-btn{
+  width: 200px !important;
+  height: 40px !important;
+  border-radius: 30px !important;
+  background:#CE4F53 !important;
+  font-size: 17px !important; 
+  color: white !important;
+}
+.tab{
+  margin: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border: 1px solid #ff0021;
+  border-radius: 5px;
+  background: #ff0021;
+}
+.tab-text{
+  flex: 1;
+  font-weight: 300 !important;
+  font-size: 20px !important;
+}
+.alert-container{
+  margin: 10px 20px;
+  background: rgba(0, 106, 176,0.14);
+  padding: 10px;
+  border-radius: 5;
+}
+.verify{
+  flex: 1;
+padding: 5px 10px;
+border-radius: 15;
+margin: 0px 10px;
+display: flex;
+justify-content: center;
+align-items: center;
+}

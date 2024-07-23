@@ -1,0 +1,138 @@
+.confirm-withdraw {
+    background: #002dbf;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.pay-circle {
+    font-size: 26px !important;
+    font-weight: bold !important;
+    color: #1040e0 !important;
+}
+
+.card-head-img {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+}
+
+.wifi {
+    font-size: 26px !important;
+    color: #fff !important;
+    font-weight: bold !important;
+    transform: rotate(90deg) !important;
+}
+
+.atm-card-information {
+    display: flex;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 5px;
+    justify-content: flex-start;
+    flex-direction: column;
+    max-width: 70%;
+}
+
+.eye-icon {
+    font-size: 26px !important;
+    color: #3e3e3e !important;
+    font-weight: bold !important;
+}
+
+.atm-card-text {
+    font-size: 17 !important;
+    color: #fff !important;
+    font-weight: bold !important;
+}
+
+.input-otp {
+    margin: 5px !important;
+    font-weight: 400 !important;
+    font-size: 18px !important;
+    max-width: 250px !important;
+    border-radius: 10px !important;
+}
+
+.item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #eee;
+    margin: 10px 0px;
+    background: #ff0021;
+}
+
+.input-currency {
+    font-size: 18px;
+    font-weight: 700;
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px #eee solid;
+}
+
+.check-amount {
+    background: #ff0021;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 30px;
+}
+
+.check-amount-container {
+    margin: 10px 0px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    background: #eee;
+    border-radius: 5px;
+}
+
+.verifying {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.with-draw-money {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.request-detail table {
+    width: 100%;
+    border: 2px gba(252, 93, 93, 0.744) solid;
+    margin-bottom: 10px;
+}
+
+.request-detail table td {
+    border: 2px rgba(252, 93, 93, 0.744) solid;
+    padding: 7px 3px;
+    text-align: center;
+    font-size: 13px;
+}
+
+.request-detail table td:first-child {
+    width: 40%;
+}
+
+.request-detail .title-detail {
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+}
