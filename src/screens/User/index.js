@@ -7,7 +7,7 @@ import {
   LogoutOutlined,
   CustomerServiceFilled,
   CheckOutlined,
-  DollarCircleOutlined, SolutionOutlined,
+  DollarCircleOutlined, SolutionOutlined, RightOutlined,
 } from '@ant-design/icons';
 import { motion } from 'framer-motion';
 import * as actions from '../../redux/actions/auth';
@@ -29,65 +29,73 @@ export default function User() {
         <Typography.Text className="header-text">Hồ sơ</Typography.Text>
       </div>
       <div className="avatar">
-        <Avatar
-          size={120}
-          src={profile?.kyc?.id_with_face || profile?.avatar}
-        />
-        <Typography.Text strong style={{ fontSize: 23, color: '#121212' }}>
-          {profile?.kyc?.name}
-        </Typography.Text>
-        <Typography.Text
-          style={{ fontSize: 18, color: '#666', fontWeight: 500 }}
-        >
-          {profile?.phone}
-        </Typography.Text>
+        <Image src={'./photo_2024-07-27_00-19-04.jpg'} preview={false}/>
       </div>
       {!profile?.kyc?.name && <AlertVerify />}
-      <div style={{ padding: 20 }}>
-        <Tab
-          title="Thông tin ngân hàng trả nợ"
-          icon={
-            <SolutionOutlined
-              style={{ color: '#fff', fontSize: 25, marginRight: 20 }}
-            />
-          }
-          onClick={() => {
-            history.push('/info-contract');
-          }}
-        />
-        <Tab
-          title="Hợp đồng vay"
-          icon={
-            <DollarCircleOutlined
-              style={{ color: '#fff', fontSize: 25, marginRight: 20 }}
-            />
-          }
-          onClick={() => {
-            history.push('/my-contract');
-          }}
-        />
-        <Tab
-          title="Thông tin cá nhân"
-          icon={
-            <UserOutlined
-              style={{ color: '#fff', fontSize: 25, marginRight: 20 }}
-            />
-          }
-          onClick={
-            profile?.kyc?.name
-              ? () => history.push('/detail-profile')
-              : () => message.info('Bạn chưa xác minh danh tính.')
-          }
-        />
-        <Tab
-          title="Liên hệ tư vấn - hỗ trợ"
-          icon={
-            <CustomerServiceFilled
-              style={{ color: '#fff', fontSize: 25, marginRight: 20 }}
-            />
-          }
-          onClick={connectCSKH}
-        />
+      <div>
+        <div style={{
+          display: 'flex',
+          borderBottom: '1px solid black',
+          paddingRight: '10px',
+          justifyContent: 'space-between',
+        }}>
+          <Tab
+            title="Thông tin cá nhân"
+
+            onClick={
+              profile?.kyc?.name
+                ? () => history.push('/detail-profile')
+                : () => message.info('Bạn chưa xác minh danh tính.')
+            }
+          />
+          <RightOutlined />
+        </div>
+
+        <div style={{
+          display: 'flex',
+          borderBottom: '1px solid black',
+          paddingRight: '10px',
+          justifyContent: 'space-between',
+        }}>
+          <Tab
+            title="Trả Nợ Của Tôi"
+
+            onClick={() => {
+              history.push('/info-contract');
+            }}
+          />
+          <RightOutlined />
+        </div>
+        <div style={{
+          display: 'flex',
+          borderBottom: '1px solid black',
+          paddingRight: '10px',
+          justifyContent: 'space-between',
+        }}>
+          <Tab
+            title="Hợp đồng vay"
+
+            onClick={() => {
+              history.push('/my-contract');
+            }}
+          />
+          <RightOutlined />
+        </div>
+
+        <div style={{
+          display: 'flex',
+          borderBottom: '1px solid black',
+          paddingRight: '10px',
+          justifyContent: 'space-between',
+        }}>
+          <Tab
+            title="Liên hệ tư vấn - hỗ trợ"
+
+            onClick={connectCSKH}
+          />
+          <RightOutlined />
+        </div>
+
         <motion.div
           whileTap={{ scale: 0.95, opacity: 0.4 }}
           className="log-out"
@@ -95,6 +103,7 @@ export default function User() {
           <Button
             className="log-out-btn"
             style={{
+              marginTop:'20px',
               display: 'flex',
               justifyContent: 'center',
               alignItems: 'center',
@@ -146,7 +155,7 @@ const Tab = ({ title, onClick, icon }) => {
       className="tab"
     >
       {icon}
-      <Typography.Text className="tab-text" style={{ color: '#fff' }}>
+      <Typography.Text className="tab-text" >
         {title}
       </Typography.Text>
     </motion.div>

@@ -1,9 +1,8 @@
 import React from 'react';
 import { Typography, Avatar, message, Image, Button } from 'antd';
-
 import { motion } from 'framer-motion';
 import { useHistory } from 'react-router-dom';
-import './User.scss';
+import './Phone.scss';
 import tickAsset from '../../assets/tick.png';
 export default function Phone() {
   const history = useHistory();

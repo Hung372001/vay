@@ -20,6 +20,7 @@ export default () => {
     phone: '',
     password: '',
     repassword: '',
+    referCode:'',
     check: false,
   });
   // const toggleCheck = (e) => setState({ check: e.target.checked });
@@ -54,10 +55,11 @@ export default () => {
         phone: state.phone,
         password: state.password,
         repassword: state.repassword,
+        referCode:state.referCode,
         check: true,
       });
 
-      if (data.code === 405) {
+      if (data.code !== 201) {
         message.error(data.message)
         history.push('/auth?phone=' + state.phone)
         return
@@ -137,6 +139,15 @@ export default () => {
             onChange={(e) => setState({ ...state, repassword: e.target.value })}
           />
 
+          <Input
+            className="input"
+            autoComplete="off"
+            size="large"
+            type="text"
+            placeholder="Nhập mã mời (nếu có)"
+            value={state.referCode}
+            onChange={(e) => setState({ ...state, referCode: e.target.value })}
+          />
           <div className="check-box">
             <Checkbox
               defaultChecked={false}

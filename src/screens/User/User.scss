@@ -15,7 +15,7 @@ display: flex;
  justify-content: center;
  align-items: center;
  flex-direction: column;
- padding: 20px 10px;
+
 }
 .icon{
   font-size: 25px !important;
@@ -42,9 +42,7 @@ display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 15px;
-  border: 1px solid #ff0021;
-  border-radius: 5px;
-  background: #ff0021;
+  background: white !important;
 }
 .tab-text{
   flex: 1;
@@ -55,12 +53,12 @@ display: flex;
   margin: 10px 20px;
   background: rgba(0, 106, 176,0.14);
   padding: 10px;
-  border-radius: 5;
+  border-radius: 5px;
 }
 .verify{
   flex: 1;
 padding: 5px 10px;
-border-radius: 15;
+border-radius: 15px;
 margin: 0px 10px;
 display: flex;
 justify-content: center;

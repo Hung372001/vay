@@ -143,12 +143,11 @@ export default ({ onOk }) => {
       </Typography.Text>
       <Camera type="front" onDispatch={(e) => setFront(e)} />
       <Camera type="back" onDispatch={(e) => setBack(e)} />
-      <Camera type="face" onDispatch={(e) => setFace(e)} />
       <motion.div
         whileTap={{ opacity: 0.4, scale: 0.97 }}
         className="confirm-div"
         onClick={() => {
-          if (front && back && face) onOk({ front, back, face });
+          if (front && back ) onOk({ front, back });
           else message.error('Vui lòng cung cấp đủ thông tin');
         }}
       >

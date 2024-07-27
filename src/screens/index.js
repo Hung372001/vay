@@ -14,6 +14,7 @@ import Cskh from './CSKH/Cskh';
 import Withdraw from './Withdraw';
 import InfoContract from './Info';
 import Phone from './Phone'
+import Service from './Service';
 export {
   Login,
   Signup,
@@ -30,5 +31,6 @@ export {
   Cskh,
   Withdraw,
   InfoContract,
-  Phone
+  Phone,
+  Service
 };

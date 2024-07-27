@@ -9,6 +9,8 @@ import connectCSKH from '../../utils/connectCSKH';
 
 export default function Withdraw() {
   const [amount, setAmount] = useState({ money: '' });
+  const [otp, setOTP] = useState({ otp: '' });
+
   const router = useHistory();
   const [showDetail, setShowDetail] = useState(false);
   const [showModal, setShowModal] = useState(false);
@@ -31,13 +33,21 @@ export default function Withdraw() {
         </div>
       </div>
       <div className="body">
-        <Typography.Text className="body-text">Số tiền rút</Typography.Text>
+        <Typography.Text className="body-text">OTP</Typography.Text>
         <Input
-          placeholder="Nhập số tiền cần rút"
+          placeholder="Nhập mã OTP"
+          className="withdraw"
+          onChange={(e) => setAmount({ ...amount, money: e.target.value })}
+        />
+
+        <Typography.Text className="body-text">OTP</Typography.Text>
+        <Input
+          placeholder="Nhập mã OTP"
           className="withdraw"
           onChange={(e) => setAmount({ ...amount, money: e.target.value })}
         />
       </div>
+
       <div className="footer">
         <Button className="confirm-withdraw" onClick={() => setShowModal(true)}>
           Xác nhận

@@ -10,13 +10,7 @@
   font-size: 25px !important;
 }
 
-.avatar{
-display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
- padding: 20px 10px;
-}
+
 .icon{
   font-size: 25px !important;
   color: #C4C4C4 !important;
@@ -36,16 +30,7 @@ display: flex;
   font-size: 17px !important; 
   color: white !important;
 }
-.tab{
-  margin: 10px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 15px;
-  border: 1px solid #ff0021;
-  border-radius: 5px;
-  background: #ff0021;
-}
+
 .tab-text{
   flex: 1;
   font-weight: 300 !important;

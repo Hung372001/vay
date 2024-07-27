@@ -213,48 +213,6 @@ export default function Two({ onOk }) {
           />
         </Form.Item>
 
-        <Form.Item
-          rules={[
-            {
-              required: true,
-              message: 'Nhập số điện thoại người thân',
-            },
-          ]}
-          name="relative_number"
-        >
-          <Input
-            size="large"
-            placeholder="SĐT người thân"
-            suffix={<DownCircleOutlined className="information-icon" />}
-            style={{
-              borderRadius: 5,
-              padding: 5,
-              fontSize: 18,
-            }}
-          />
-        </Form.Item>
-
-        <Form.Item
-          rules={[
-            {
-              required: true,
-              message: 'Nhập Mối quan hệ với người thân',
-            },
-          ]}
-          name="relative"
-        >
-          <Input
-            size="large"
-            placeholder="Mối quan hệ với người thân"
-            suffix={<DownCircleOutlined className="information-icon" />}
-            style={{
-              borderRadius: 5,
-              padding: 5,
-              fontSize: 18,
-            }}
-          />
-        </Form.Item>
-
         <motion.div
           whileTap={{ opacity: 0.4, scale: 0.97 }}
           style={{ display: 'flex', justifyContent: 'center' }}

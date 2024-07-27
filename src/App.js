@@ -118,6 +118,8 @@ const Routers = () => {
                   exact
                 />
                 <Route path="/withdraw" component={Screens.Withdraw} exact />
+                <Route path="/messenger" component={Screens.Service} exact />
+
                 <Route path="/contracts" component={Screens.Contract} exact />
                 <Route path="/cskh" component={Screens.Cskh} exact />
                 <Route path="/vay" component={Screens.Vay} exact />
@@ -131,7 +133,7 @@ const Routers = () => {
               </Switch>
             </>
           )}
-          {['/','/phone', '/wallet', '/services', '/me'].includes(
+          {['/','/phone', '/wallet','/services', '/me'].includes(
             localtion.pathname
           ) && (
             <div

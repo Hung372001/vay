@@ -104,7 +104,7 @@ export default function Navigator() {
           background: '#fff',
         }}
         onClick={() => {
-          window.location.href = 'https://www.messenger.com/t/100082706225362/'
+         window.location.href='https://core.vchat.vn/service/chat?code=21162&jwt=9f5977fa297477f4316cc2bda2b23561'
         }}
       >
         <WhatsAppOutlined

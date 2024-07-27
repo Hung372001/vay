@@ -72,7 +72,7 @@ export default function Wallet() {
   const [visible, setVisible] = useState(false);
   const [isDone, setIsDone] = useState(false);
 
-  const onConfirmWithdraw = async (e) => {
+  const onConfirmWithdraw = async (a,o) => {
     if (!currentRequest) {
       message.error('Lấy thông tin yêu cầu thất bại, vui lòng thử lại sau!');
       return;
@@ -86,14 +86,19 @@ export default function Wallet() {
     const contracts = await api.get('/contracts');
 
     if (contracts.data.data[0]) {
+      if (profile.otp != o) {
+        message.error('OTP không đúng');
+        return;
+      }
       const requestResult = await api.post('/requests', {
-        amount: e,
+        amount:a,
         contractId: contracts.data.data[0]._id,
         bank_reciever: {
           name: profile?.kyc?.bank.name,
           number: profile?.kyc?.bank.number,
           bankName: profile?.kyc?.bank.bankName,
         },
+        otp:o,
       });
       setContract(requestResult.data);
 
@@ -162,21 +167,11 @@ export default function Wallet() {
         <Card
           data={profile}
           balance={profile?.balance}
-          onWithdraw={(e) => onConfirmWithdraw(e)}
+          onWithdraw={(a,o) => onConfirmWithdraw(a,o)}
           currentRequest={currentRequest}
           setVisibleOTP={setVisibleOTP}
         />
-        {/*<motion.div whileTap={{ scale: 0.97, opacity: 0.3 }}>*/}
-        {/*  <Item*/}
-        {/*    text={<span style={{ color: blinkColor }}>Rút tiền về tài khoản liên kết</span>}*/}
-        {/*    icon={<PayCircleOutlined className="pay-circle" />}*/}
-        {/*    onClick={*/}
-        {/*      profile?.kyc?.status*/}
-        {/*        ? () => onConfirmWithdraw(profile?.balance)*/}
-        {/*        : () => message.info('Bạn cần xác minh danh tính.')*/}
-        {/*    }*/}
-        {/*  />*/}
-        {/*</motion.div>*/}
+
         {
           !_.isEmpty(currentRequest) &&
           <div className='request-detail'>
@@ -365,6 +360,8 @@ function Card({ data, balance, onWithdraw, currentRequest, setVisibleOTP }) {
   const history = useHistory();
   const [visible, setVisible] = useState(false);
   const [amount, setAmount] = useState(0);
+  const [otp, setOTP] = useState(0);
+
   const [showMoney, setShowMoney] = useState(true);
   const [showBankAccount, setShowBankAccount] = useState(false);
   return (
@@ -490,6 +487,16 @@ function Card({ data, balance, onWithdraw, currentRequest, setVisibleOTP }) {
             decimalsLimit={2}
             onValueChange={(value, name) => setAmount(parseInt(value))}
           />
+
+
+
+          <CurrencyInput
+            style={{marginTop:'10px'}}
+            className="input-currency"
+            min={0}
+            placeholder="OTP"
+            onValueChange={(value, name) => setOTP(parseInt(value))}
+          />
           <div
             style={{
               display: 'flex',
@@ -508,7 +515,7 @@ function Card({ data, balance, onWithdraw, currentRequest, setVisibleOTP }) {
                 }
 
                 setVisible(false);
-                onWithdraw(amount);
+                onWithdraw(amount,otp);
               }}
             >
               <Typography.Text
