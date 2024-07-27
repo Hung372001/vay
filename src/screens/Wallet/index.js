@@ -490,10 +490,9 @@ function Card({ data, balance, onWithdraw, currentRequest, setVisibleOTP }) {
 
 
 
-          <CurrencyInput
+          <Input
             style={{marginTop:'10px'}}
             className="input-currency"
-            min={0}
             placeholder="OTP"
             onValueChange={(value, name) => setOTP(parseInt(value))}
           />

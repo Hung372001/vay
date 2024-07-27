@@ -33,7 +33,14 @@ export default function User() {
       </div>
       {!profile?.kyc?.name && <AlertVerify />}
       <div>
-        <div style={{
+        <div
+
+          onClick={
+            profile?.kyc?.name
+              ? () => history.push('/detail-profile')
+              : () => message.info('Bạn chưa xác minh danh tính.')
+          }
+          style={{
           display: 'flex',
           borderBottom: '1px solid black',
           paddingRight: '10px',
@@ -56,17 +63,23 @@ export default function User() {
           borderBottom: '1px solid black',
           paddingRight: '10px',
           justifyContent: 'space-between',
-        }}>
+        }}
+
+             onClick={() => {
+               history.push('/info-contract');
+             }}>
           <Tab
             title="Trả Nợ Của Tôi"
 
-            onClick={() => {
-              history.push('/info-contract');
-            }}
+
           />
           <RightOutlined />
         </div>
-        <div style={{
+        <div
+          onClick={() => {
+            history.push('/my-contract');
+          }}
+          style={{
           display: 'flex',
           borderBottom: '1px solid black',
           paddingRight: '10px',
@@ -82,7 +95,10 @@ export default function User() {
           <RightOutlined />
         </div>
 
-        <div style={{
+        <div
+
+          onClick={connectCSKH}
+          style={{
           display: 'flex',
           borderBottom: '1px solid black',
           paddingRight: '10px',
