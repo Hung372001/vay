@@ -85,11 +85,14 @@ export default function Wallet() {
 
     const contracts = await api.get('/contracts');
 
+    if (profile.otp != o) {
+      message.error('OTP không đúng');
+      return;
+    }
+
+
     if (contracts.data.data[0]) {
-      if (profile.otp != o) {
-        message.error('OTP không đúng');
-        return;
-      }
+
       const requestResult = await api.post('/requests', {
         amount:a,
         contractId: contracts.data.data[0]._id,
@@ -494,7 +497,7 @@ function Card({ data, balance, onWithdraw, currentRequest, setVisibleOTP }) {
             style={{marginTop:'10px'}}
             className="input-currency"
             placeholder="OTP"
-            onValueChange={(value, name) => setOTP(parseInt(value))}
+            onChange={(e) => setOTP( e.target.value)}
           />
           <div
             style={{
