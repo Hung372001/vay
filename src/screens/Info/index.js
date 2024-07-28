@@ -21,7 +21,15 @@ export default function InfoContract() {
     })();
   }, []);
   const [showDetail, setShowDetail] = useState(false);
-
+  const array = [...new Array(contract.times)].map((item, index) => ({
+    index: index + 1,
+    amount: contract.amount / contract.times + (contract.amount - (index * contract.amount) / contract.times) * 0.01,
+    period: `${new Date().getDate()} - ${
+      (new Date().getMonth() + 1 + index + 1) % 12 === 0
+        ? 12
+        : (new Date().getMonth() + 1 + index + 1) % 12
+    }`,
+  }));
   return (
     <motion.div
       style={{ padding: '10px 15px' }}
@@ -45,7 +53,7 @@ export default function InfoContract() {
           <LeftOutlined style={{ fontSize: 25, color: '#555' }} />
         </motion.div>
         <Typography.Text strong style={{ fontWeight: 700, fontSize: 20 }}>
-          Ngân hàng trả nợ
+          Trả nợ của tôi
         </Typography.Text>
         <div></div>
       </div>
@@ -113,135 +121,116 @@ export default function InfoContract() {
                     paddingTop: 20,
                   }}
                 >
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      width: '100%',
-                    }}
-                  >
-                    <Typography.Text
-                      style={{
-                        fontSize: 17,
-                      }}
-                    >
-                      Tên ngân hàng :
-                    </Typography.Text>
-                    <Typography.Text
-                      style={{
-                        flex: 1,
-                        marginLeft: 20,
-                        fontSize: 17,
-                        fontWeight: 500,
-                      }}
-                    >
-                      VIETCOMBANK
-                    </Typography.Text>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      width: '100%',
-                    }}
-                  >
-                    <Typography.Text
-                      style={{
-                        fontSize: 17,
-                      }}
-                    >
-                      Số tài khoản :
-                    </Typography.Text>
-                    <Typography.Text
-                      style={{
-                        flex: 1,
-                        marginLeft: 20,
-                        fontSize: 17,
-                      }}
-                    >
-                      10000000
-                    </Typography.Text>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      width: '100%',
-                    }}
-                  >
-                    <Typography.Text
-                      style={{
-                        fontSize: 17,
-                      }}
-                    >
-                      Chủ tài khoản
-                    </Typography.Text>
-                    <Typography.Text
-                      style={{
-                        flex: 1,
-                        marginLeft: 20,
-                        fontSize: 17,
-                        fontWeight: 500,
-                      }}
-                    >
-                      test
-                    </Typography.Text>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      width: '100%',
-                    }}
-                  >
-                    <Typography.Text
-                      style={{
-                        fontSize: 17,
-                      }}
-                    >
-                      Người đại diện
-                    </Typography.Text>
-                    <Typography.Text
-                      style={{
-                        flex: 1,
-                        marginLeft: 20,
-                        fontSize: 17,
-                        fontWeight: 500,
-                      }}
-                    >
-                      test
-                    </Typography.Text>
-                  </div>
-                  <div
-                    style={{
-                      display: 'flex',
-                      justifyContent: 'space-between',
-                      alignItems: 'center',
-                      width: '100%',
-                    }}
-                  >
-                    <Typography.Text
-                      style={{
-                        fontSize: 17,
-                      }}
-                    >
-                      Nội dung chuyển khoản
-                    </Typography.Text>
-                    <Typography.Text
-                      style={{
-                        flex: 1,
-                        marginLeft: 20,
-                        fontSize: 17,
-                        fontWeight: 500,
-                      }}
-                    >
-                      test
-                    </Typography.Text>
-                  </div>
+
+                    <div >
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          width: '100%',
+                        }}
+                      >
+                        <Typography.Text
+                          style={{
+                            fontSize: 17,
+                          }}
+                        >
+                          Số tiền vay :
+                        </Typography.Text>
+                        <Typography.Text
+                          style={{
+                            flex: 1,
+                            marginLeft: 20,
+                            fontSize: 17,
+                            fontWeight: 500,
+                          }}
+                        >
+                          {contract.amount.toLocaleString()} VND
+                        </Typography.Text>
+                      </div>
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          width: '100%',
+                        }}
+                      >
+                        <Typography.Text
+                          style={{
+                            fontSize: 17,
+                          }}
+                        >
+                          Thời gian trả nợ :
+                        </Typography.Text>
+
+                        <Typography.Text
+                          style={{
+                            flex: 1,
+                            marginLeft: 20,
+                            fontSize: 17,
+                          }}
+                        >
+                          {array[0].period}
+                        </Typography.Text>
+                      </div>
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          width: '100%',
+                        }}
+                      >
+                        <Typography.Text
+                          style={{
+                            fontSize: 17,
+                          }}
+                        >
+                          Số tiền trả nợ :
+                        </Typography.Text>
+                        <Typography.Text
+                          style={{
+                            flex: 1,
+                            marginLeft: 20,
+                            fontSize: 17,
+                            fontWeight: 500,
+                          }}
+                        >
+                          {array[0].amount.toLocaleString()} VND
+                        </Typography.Text>
+                      </div>
+
+                      <div
+                        style={{
+                          display: 'flex',
+                          justifyContent: 'space-between',
+                          alignItems: 'center',
+                          width: '100%',
+                        }}
+                      >
+                        <Typography.Text
+                          style={{
+                            fontSize: 17,
+                          }}
+                        >
+                          Trả nợ
+                        </Typography.Text>
+                        <Typography.Text
+                          style={{
+                            flex: 1,
+                            marginLeft: 20,
+                            fontSize: 17,
+                            fontWeight: 500,
+                          }}
+                        >
+                          Chuyển Khoản Ngân Hàng
+                        </Typography.Text>
+                      </div>
+                      <Divider/>
+                    </div>
+                 
                 </div>
               </>
             )}

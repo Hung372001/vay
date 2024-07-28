@@ -21,7 +21,6 @@ export default function MyContract() {
     })();
   }, []);
   const [showDetail, setShowDetail] = useState(false);
-
   return (
     <motion.div
       style={{ padding: '10px 15px' }}
