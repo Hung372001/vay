@@ -21,25 +21,25 @@ const listLoan = [
     id: 1,
     title : '40 Triệu ~ 50 Triệu',
     limit: '20-60 tháng',
-    rate: '0.8%'
+    rate: '0.7%'
   },
   {
     id: 2,
     title : '60 Triệu ~ 80 Triệu',
     limit: '20-60 tháng',
-    rate: '0.8%'
+    rate: '0.7%'
   },
   {
     id: 3,
     title : '100 Triệu ~ 200 Triệu',
     limit: '20-60 tháng',
-    rate: '0.8%'
+    rate: '0.7%'
   },
   {
     id: 4,
     title : '200 Triệu ~ 300 Triệu',
     limit: '20-60 tháng',
-    rate: '0.8%'
+    rate: '0.7%'
   }
 ]
 
