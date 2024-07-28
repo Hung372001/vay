@@ -332,7 +332,6 @@ export default function DetailProfile() {
               flex: 2,
             }}
           >
-            SĐT người thân :{' '}
           </Typography.Text>
           <Typography.Text
             style={{
@@ -341,7 +340,6 @@ export default function DetailProfile() {
               fontWeight: 500,
             }}
           >
-            {profile?.kyc?.relative_number}{' '}
           </Typography.Text>
         </div>
 
@@ -363,7 +361,6 @@ export default function DetailProfile() {
               flex: 2,
             }}
           >
-            Mối quan hệ với người thân :{' '}
           </Typography.Text>
           <Typography.Text
             style={{
@@ -372,7 +369,6 @@ export default function DetailProfile() {
               fontWeight: 500,
             }}
           >
-            {profile?.kyc?.relative}{' '}
           </Typography.Text>
         </div>
 
