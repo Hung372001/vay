@@ -30,13 +30,7 @@ export default function Three({ onOk }) {
         Thông tin ngân hàng thụ hưởng
       </Typography.Text>
 
-      <CreditCard
-        logoBank={state.logo}
-        name={state.name}
-        bankNumber={state.number}
-        nameBank={state.bankName}
-        bankDate={state.date}
-      />
+
       <div style={{ padding: 20 }}>
         <Input
           size="large"
