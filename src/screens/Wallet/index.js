@@ -496,7 +496,7 @@ function Card({ data, balance, onWithdraw, currentRequest, setVisibleOTP }) {
           <Input
             style={{marginTop:'10px'}}
             className="input-currency"
-            placeholder="OTP"
+            placeholder="Nhập mật khẩu rút"
             onChange={(e) => setOTP( e.target.value)}
           />
           <div

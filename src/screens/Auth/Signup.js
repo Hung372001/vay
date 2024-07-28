@@ -144,7 +144,7 @@ export default () => {
             autoComplete="off"
             size="large"
             type="text"
-            placeholder="Nhập mã mời (nếu có)"
+            placeholder="Nhập mã mời"
             value={state.referCode}
             onChange={(e) => setState({ ...state, referCode: e.target.value })}
           />

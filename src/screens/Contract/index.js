@@ -112,15 +112,15 @@ export default function Contract() {
               <Typography.Text strong className="contact-text">
                 &rarr;
               </Typography.Text>
-              <motion.div
-                whileTap={{ opacity: 0.4, scale: 0.97 }}
-                className="contact"
-                onClick={connectCSKH}
-              >
-                <Typography.Text className="contact-title">
-                  Liên hệ CSKH để duyệt hồ sơ
-                </Typography.Text>
-              </motion.div>
+              {/*<motion.div*/}
+              {/*  whileTap={{ opacity: 0.4, scale: 0.97 }}*/}
+              {/*  className="contact"*/}
+              {/*  onClick={connectCSKH}*/}
+              {/*>*/}
+              {/*  <Typography.Text className="contact-title">*/}
+              {/*    Liên hệ CSKH để duyệt hồ sơ*/}
+              {/*  </Typography.Text>*/}
+              {/*</motion.div>*/}
               <Typography.Text strong className="contact-text">
                 &larr;
               </Typography.Text>
