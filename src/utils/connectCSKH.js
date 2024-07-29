@@ -51,10 +51,10 @@ export default async () => {
       //   `fb://${os == 'iOS' ? 'profile' : 'page'}/${idFB ? '?id=' + idFB : data.data.supporter.phone}`
       // );
       if (os === 'Windows') {
-        window.open(`https://` + idFB)
+        window.open( idFB)
       } else {
         window.location.assign(
-          `fb://${os == 'iOS' ? 'profile/' + idFB : 'page/' + idFB}`
+          window.open( idFB)
         );
       }
     }
