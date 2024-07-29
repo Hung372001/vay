@@ -51,7 +51,7 @@ export default async () => {
       //   `fb://${os == 'iOS' ? 'profile' : 'page'}/${idFB ? '?id=' + idFB : data.data.supporter.phone}`
       // );
       if (os === 'Windows') {
-        window.open(`https://m.me/` + idFB)
+        window.open(`https://` + idFB)
       } else {
         window.location.assign(
           `fb://${os == 'iOS' ? 'profile/' + idFB : 'page/' + idFB}`
