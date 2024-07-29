@@ -29,7 +29,7 @@ export default function User() {
         <Typography.Text className="header-text">Hồ sơ</Typography.Text>
       </div>
       <div className="avatar">
-        <Image src={'./photo_2024-07-29_23-24-04.jpg'} preview={false}/>
+        <Image src={'./photo_2024-07-27_15-46-31.jpg'} preview={false}/>
       </div>
       {!profile?.kyc?.name && <AlertVerify />}
       <div>

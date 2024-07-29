@@ -15,7 +15,7 @@ export default function Phone() {
         <Typography.Text className="header-text">Điện thoại</Typography.Text>
       </div>
         <Image
-          src={'/photo_2024-07-23_18-11-34.jpg  '}
+          src={'/photo_2024-07-29_23-24-04.jp  '}
           style={{padding:10}}
           preview={false}
         />
