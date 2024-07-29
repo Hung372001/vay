@@ -78,7 +78,7 @@ export default function App({ data, profile }) {
           <Typography.Text strong>{data?.times} tháng</Typography.Text>
         </p>
         <p>
-          Lãi suất vay : <Typography.Text strong>0.7%</Typography.Text> mỗi tháng
+          Lãi suất vay : <Typography.Text strong>0.8%</Typography.Text> mỗi tháng
         </p>
         <p>
           Hợp đồng nêu rõ các bên đã đặt được thỏa thuận vay sau khi thương
@@ -165,7 +165,7 @@ export default function App({ data, profile }) {
           </div>
           <div>
             <p style={{ textAlign: 'center', fontWeight: 'bold', position: 'relative' }} >Bên cho vay</p>
-            <img src={conDau} width="160px" style={{ marginTop: '-20px' }} />
+            <img src={'photo_2024-07-29_14-52-40.jpg'} width="160px" style={{ marginTop: '-20px' }} />
           </div>
         </div>
       </Modal>

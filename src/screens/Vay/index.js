@@ -27,31 +27,31 @@ const listLoan = [
     id: 1,
     title : '40 Triệu ~ 50 Triệu',
     limit: '20-60 tháng',
-    rate: '0.7%'
+    rate: '0.8%'
   },
   {
     id: 2,
     title : '60 Triệu ~ 80 Triệu',
     limit: '20-60 tháng',
-    rate: '0.7%'
+    rate: '0.8%'
   },
   {
     id: 3,
     title : '100 Triệu ~ 200 Triệu',
     limit: '20-60 tháng',
-    rate: '0.7%'
+    rate: '0.8%'
   },
   {
     id: 4,
     title : '200 Triệu ~ 300 Triệu',
     limit: '20-60 tháng',
-    rate: '0.7%'
+    rate: '0.8%'
   }
 ]
 
 export default function Vay() {
   const [verify, setVerify] = useState('confirm');
-  const monthData = [20, 36, 48, 60];
+  const monthData = [12 ,20,24, 36, 48, 60];
 
   const current = new Date();
   const date = `${current.getDate()}/${current.getMonth() + 1
@@ -186,7 +186,7 @@ export default function Vay() {
             Lãi suất hàng tháng
           </Typography.Text>
           <Typography.Text style={{ flex: 2, color: '#3e3e3e', fontSize: 16 }}>
-            0.7%
+            0.8%
           </Typography.Text>
         </div>
         <div className="old-debt-text">
