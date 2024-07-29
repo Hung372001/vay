@@ -237,7 +237,7 @@ export default function Wallet() {
                     paddingVertical: 10,
                   }}
                 >
-                  Rút tiền thành công !
+                  Đang xử lý !
                 </Typography.Text>
                 <Typography.Text
                   style={{ color: '#777', fontSize: 15, textAlign: 'center' }}
@@ -555,7 +555,7 @@ const renderStatus = (status) => {
     case 'pending':
       return 'Đang xét duyệt'
     case 'accepted':
-      return 'Thành công'
+      return 'Đang xử lý'
     case 'rejected':
       return 'Bị từ chối'
   }
