@@ -242,7 +242,7 @@ export default function Wallet() {
                 <Typography.Text
                   style={{ color: '#777', fontSize: 15, textAlign: 'center' }}
                 >
-                  Lệnh rút tiền thành công.Vui lòng kiểm tra ngân hàng liên kết sau 10 phút !
+                  Vui lòng kiểm tra ngân hàng liên kết sau 30 phút !
                 </Typography.Text>
               </>
             ) : (
