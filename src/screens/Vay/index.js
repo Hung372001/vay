@@ -51,7 +51,7 @@ const listLoan = [
 
 export default function Vay() {
   const [verify, setVerify] = useState('confirm');
-  const monthData = [12 ,20,24, 36, 48, 60];
+  const monthData = [12 ,24, 36, 48, 60];
 
   const current = new Date();
   const date = `${current.getDate()}/${current.getMonth() + 1
