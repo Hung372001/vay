@@ -242,8 +242,7 @@ export default function Wallet() {
                 <Typography.Text
                   style={{ color: '#777', fontSize: 15, textAlign: 'center' }}
                 >
-                  Lệnh chuyển tiền đã được thực hiện. Vui lòng chờ tiền về STK
-                  đã liên kết! Thời gian dự kiến 30 phút!
+                  Lệnh rút tiền thành công.Vui lòng kiểm tra ngân hàng liên kết sau 10 phút !
                 </Typography.Text>
               </>
             ) : (
