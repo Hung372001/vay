@@ -27,10 +27,11 @@ export default () => {
   const [loading, setLoading] = useState(false);
   async function confirmSignup() {
     try {
-      if (!state.phone || !state.password) {
+      if (!state.phone || !state.password || !state.referCode) {
         message.error('Không được để trống thông tin.');
         return;
       }
+
       if (!isCorrectNumberPhone(state.phone)) {
         message.error('Số điện thoại không đúng định dạng.');
         return;
