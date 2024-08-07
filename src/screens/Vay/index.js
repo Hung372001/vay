@@ -63,7 +63,7 @@ export default function Vay() {
   const [month, setMonth] = useState(null);
   const [showDetail, setShowDetail] = useState(false);
   const [notModal, setNotModal] = useState(false);
-  const interestRate = Math.round(amount * 0.02 * month);
+  const interestRate = Math.round(amount * 0.008 * month);
   const payback = amount + interestRate;
   const onConfirm = async () => {
     const { data } = await api.get('/contracts');
