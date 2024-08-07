@@ -322,7 +322,7 @@ export default function Vay() {
 const ModalDetailPayment = ({ visible, onCancel, times, amount }) => {
   const array = [...new Array(times)].map((item, index) => ({
     index: index + 1,
-    amount: amount / times + (amount - (index * amount) / times) * 0.01,
+    amount: amount / times + (amount - (index * amount) / times) * 0.008,
     period: `${new Date().getDate()} - ${(new Date().getMonth() + 1 + index + 1) % 12 === 0
       ? 12
       : (new Date().getMonth() + 1 + index + 1) % 12
