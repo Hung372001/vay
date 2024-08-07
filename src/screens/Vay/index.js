@@ -178,7 +178,7 @@ export default function Vay() {
             Trả nợ kì đầu
           </Typography.Text>
           <Typography.Text style={{ flex: 2, color: '#3e3e3e', fontSize: 16 }}>
-            {Math.round(amount / month + amount * 0.01).toLocaleString()} VND
+            {Math.round(amount / month + amount * 0.008).toLocaleString()} VND
           </Typography.Text>
         </div>
         <div className="old-debt-text">
