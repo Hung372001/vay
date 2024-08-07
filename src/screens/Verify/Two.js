@@ -12,10 +12,8 @@ import api from '../../api';
 import './verify.scss';
 export default function Two({ onOk }) {
   const onFinish = async (values) => {
-    if (parseInt(values['dob'].split('/')[2]) > 2004) {
-      message.error('Độ tuổi phải trên 18.');
-      return;
-    }
+
+   
     const { data } = await api.get(`/users/checkId?id=${values.id_number}`);
     if (data.data) {
       message.error('Chứng minh thư đã được sử dụng để thực hiện khoản vay.');

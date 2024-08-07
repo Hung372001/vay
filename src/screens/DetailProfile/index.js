@@ -476,6 +476,36 @@ export default function DetailProfile() {
             {profile?.kyc?.bank.name}{' '}
           </Typography.Text>
         </div>
+        <div
+          style={{
+            width: '100%',
+            display: 'flex',
+            justifyContent: 'flex-start',
+            alignItems: 'center',
+            padding: '5px 0px',
+          }}
+        >
+          <Typography.Text
+            style={{
+              paddingRight: 10,
+
+              fontSize: 14,
+              fontWeight: 500,
+              flex: 2,
+            }}
+          >
+            Số CMND/CCCD :{' '}
+          </Typography.Text>
+          <Typography.Text
+            style={{
+              flex: 2,
+              fontSize: 16,
+              fontWeight: 500,
+            }}
+          >
+            {profile?.kyc?.id_number}{' '}
+          </Typography.Text>
+        </div>
       </div>
     </motion.div>
   );

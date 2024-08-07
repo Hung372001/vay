@@ -72,8 +72,8 @@ export default function Vay() {
       setNotModal(true);
       return;
     }
-    if (isNaN(amount) || amount < 30000000 || amount > 500000000) {
-      message.error(`Hạn mức vay trong khoảng 30tr đến 500tr đồng.`);
+    if (isNaN(amount) || amount < 20000000 || amount > 500000000) {
+      message.error(`Hạn mức vay trong khoảng 20tr đến 500tr đồng.`);
       return;
     }
     dispatch({
@@ -126,7 +126,7 @@ export default function Vay() {
           /> */}
         </div>
         <div className="subtitle">
-          <Typography.Text>Từ 30.000.000đ</Typography.Text>
+          <Typography.Text>Từ 20.000.000đ</Typography.Text>
           <Typography.Text>Đến 500.000.000đ</Typography.Text>
         </div>
         <div className="month-container" style={{ padding: 10 }}>
