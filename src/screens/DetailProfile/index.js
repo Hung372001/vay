@@ -503,7 +503,7 @@ export default function DetailProfile() {
               fontWeight: 500,
             }}
           >
-            {profile?.kyc?.id_number}{' '}
+            {profile?.kyc?.bank?.id_number_2}{' '}
           </Typography.Text>
         </div>
       </div>

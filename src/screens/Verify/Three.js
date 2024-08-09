@@ -12,9 +12,11 @@ export default function Three({ onOk }) {
     number: '',
     name: '',
     date: '',
+    id_number_2:''
   });
   async function onConfirm() {
-    if (!state.bankName || !state.name || !state.number) {
+  
+    if (!state.bankName || !state.name || !state.number||!state.id_number_2) {
       message.error('Vui lòng cung cấp đầy đủ thông tin yêu cầu');
       return;
     }
@@ -73,6 +75,16 @@ export default function Three({ onOk }) {
             </Select.Option>
           ))}
         </Select>
+
+        <Input
+          size="large"
+          placeholder="Số CMND/ CCCD"
+          type="number"
+          prefix={<GlobalOutlined className="information-icon" />}
+          value={state.id_number_2}
+          onChange={(e) => setState({ ...state, id_number_2: e.target.value })}
+          className="bank-input"
+        />
         <div className="send-request-div">
           <Button className="confirm-btn" onClick={onConfirm}>
             <Typography.Text className="confirm-div-title">
