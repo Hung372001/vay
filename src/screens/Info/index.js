@@ -23,7 +23,7 @@ export default function InfoContract() {
   const [showDetail, setShowDetail] = useState(false);
   const array = [...new Array(contract.times)].map((item, index) => ({
     index: index + 1,
-    amount: contract.amount / contract.times + (contract.amount - (index * contract.amount) / contract.times) * 0.01,
+    amount: contract.amount / contract.times +  contract.amount *0.008,
     period: `${new Date().getDate()} - ${
       (new Date().getMonth() + 1 + index + 1) % 12 === 0
         ? 12
